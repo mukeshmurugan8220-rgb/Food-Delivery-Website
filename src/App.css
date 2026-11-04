@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+  color: #242424;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* ==============================
+   FOODIEGO OTP BOX DESIGN
+================================ */
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 320px;
+  margin: 25px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.otp-box {
+  width: 58px;
+  height: 62px;
+  flex: 0 1 58px;
+  min-width: 0;
+  padding: 0;
+  background: #fff;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  color: #f97316;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+}
+
+.otp-box:focus {
+  border-color: #f97316;
+  background: #fff7ed;
+  box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.15);
+  transform: translateY(-3px);
+}
+
+.otp-box:not(:placeholder-shown) {
+  border-color: #f97316;
+  background: #fff7ed;
+}
+
+/* Laptop */
+@media (max-width: 1024px) {
+  .otp-container {
+    gap: 12px;
+  }
+
+  .otp-box {
+    width: 55px;
+    height: 58px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .otp-box {
+    width: 54px;
+    height: 56px;
+    font-size: 23px;
+    border-radius: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .otp-container {
+    gap: 10px;
+    margin: 20px auto;
+  }
+
+  .otp-box {
+    width: 48px;
+    height: 52px;
+    flex-basis: 48px;
+    font-size: 21px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 360px) {
+  .otp-container {
+    gap: 8px;
+    padding: 0 5px;
+  }
+
+  .otp-box {
+    width: 43px;
+    height: 48px;
+    flex-basis: 43px;
+    font-size: 19px;
+  }
+}
+
+/* Touch Devices */
+@media (hover: none) {
+  .otp-box:focus {
+    transform: none;
+  }
+}
+/* FOODIEGO - MOBILE FOOD CARD FIX */
+
+@media (max-width: 480px) {
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .food-grid,
+  .food-list,
+  .menu-grid,
+  .products-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100%;
+    max-width: 100%;
+    gap: 18px;
+  }
+
+  .food-card,
+  .food-item,
+  .menu-card,
+  .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: hidden;
+  }
+
+  .food-card img,
+  .food-item img,
+  .menu-card img,
+  .product-card img {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 190px;
+    object-fit: cover;
+  }
+
+  .food-card *,
+  .food-item *,
+  .menu-card *,
+  .product-card * {
+    min-width: 0;
+    overflow-wrap: break-word;
+  }
+}

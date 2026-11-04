@@ -1,0 +1,751 @@
+
+/* =========================================
+   FOODIEGO - ORDER TRACKING PAGE
+========================================= */
+
+.tracking-page {
+  min-height: 100vh;
+  padding: 45px 20px;
+  background: #fff8f3;
+  font-family: "Poppins", sans-serif;
+  color: #292929;
+}
+
+.tracking-card {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 35px;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+  animation: trackingFade 0.6s ease;
+}
+
+@keyframes trackingFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* HEADER */
+
+.tracking-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tracking-main-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff0e8;
+  border-radius: 50%;
+  font-size: 38px;
+}
+
+.tracking-header h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 800;
+  color: #252525;
+}
+
+.tracking-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.tracking-order-id {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 9px 18px;
+  background: #fff4ed;
+  border-radius: 30px;
+  color: #666;
+  font-size: 13px;
+}
+
+.tracking-order-id strong {
+  color: #ff6333;
+}
+
+/* DELIVERY ETA */
+
+.delivery-eta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 25px;
+  background: linear-gradient(135deg, #fff0e6, #fff8f3);
+  border-radius: 18px;
+  margin-bottom: 35px;
+}
+
+.delivery-eta span {
+  color: #777;
+  font-size: 13px;
+}
+
+.delivery-eta h2 {
+  color: #ff6333;
+  font-size: 25px;
+  margin: 7px 0;
+}
+
+.countdown-text {
+  font-size: 12px;
+  color: #888;
+}
+
+.eta-icon {
+  font-size: 38px;
+}
+
+/* DELIVERY ROAD */
+
+.delivery-road {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 35px 5px 10px;
+}
+
+.road-start,
+.road-end {
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.road-line {
+  position: relative;
+  flex: 1;
+  height: 7px;
+  background: #e9e9e9;
+  border-radius: 20px;
+}
+
+.road-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #ff6333;
+  border-radius: 20px;
+  transition: width 0.8s ease;
+}
+
+.moving-bike {
+  position: absolute;
+  top: -24px;
+  transform: translateX(-50%);
+  font-size: 28px;
+  transition: left 0.8s ease;
+  z-index: 2;
+}
+
+.road-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+  font-size: 12px;
+  margin-bottom: 35px;
+}
+
+/* TRACKING PROGRESS */
+
+.tracking-progress {
+  height: 8px;
+  background: #eeeeee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.tracking-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6333, #ff985c);
+  border-radius: 20px;
+  transition: width 0.8s ease;
+}
+
+/* TRACKING STEPS */
+
+.tracking-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 30px;
+}
+
+.tracking-step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: #fafafa;
+  border: 1px solid #eeeeee;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.tracking-step.completed {
+  background: #fff7f2;
+  border-color: #ffd6c4;
+}
+
+.tracking-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeeeee;
+  border-radius: 50%;
+  font-size: 23px;
+}
+
+.tracking-step.completed .tracking-icon {
+  background: #ffe2d5;
+}
+
+.tracking-step-info {
+  flex: 1;
+}
+
+.tracking-step-info h3 {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.tracking-step-info p {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.step-status {
+  font-size: 11px;
+  color: #999;
+  font-weight: 600;
+}
+
+.tracking-step.completed .step-status {
+  color: #ff6333;
+}
+
+/* CURRENT STATUS */
+
+.tracking-current-status {
+  text-align: center;
+  padding: 22px;
+  margin-bottom: 30px;
+  background: #fff7f2;
+  border-radius: 18px;
+}
+
+.tracking-current-status span {
+  color: #888;
+  font-size: 12px;
+}
+
+.tracking-current-status h2 {
+  margin: 10px 0;
+  color: #ff6333;
+  font-size: 22px;
+}
+
+.tracking-current-status p {
+  margin: 0;
+  font-size: 13px;
+  color: #777;
+}
+
+/* OTP CARD */
+
+.delivery-otp-card {
+  padding: 30px 25px;
+  margin-bottom: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #fff8f3, #fff0e8);
+  border: 1px solid #ffdfce;
+  border-radius: 20px;
+  animation: trackingFade 0.5s ease;
+}
+
+.otp-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.delivery-otp-card h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+  color: #292929;
+}
+
+.delivery-otp-card > p {
+  max-width: 450px;
+  margin: 0 auto 18px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.demo-otp {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px 0 15px;
+  background: #ffffff;
+  border: 1px dashed #ff6333;
+  border-radius: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+.demo-otp strong {
+  color: #ff6333;
+  letter-spacing: 4px;
+  font-size: 18px;
+}
+
+/* FOUR OTP BOXES */
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 320px;
+  margin: 25px auto;
+}
+
+.otp-box {
+  width: 58px;
+  height: 62px;
+  flex: 1;
+  min-width: 0;
+  border: 2px solid #e5e7eb;
+  border-radius: 14px;
+  background: #ffffff;
+  color: #ff6333;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+.otp-box:focus {
+  border-color: #ff6333;
+  background: #fff5ef;
+  box-shadow: 0 0 0 4px rgba(255, 99, 51, 0.15);
+  transform: translateY(-3px);
+}
+
+.otp-box:not(:placeholder-shown) {
+  border-color: #ff6333;
+  background: #fff5ef;
+}
+
+/* OTP ERROR */
+
+.otp-error {
+  color: #e53935;
+  font-size: 13px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+/* VERIFY BUTTON */
+
+.verify-otp-btn {
+  width: 100%;
+  max-width: 320px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  background: #ff6333;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.verify-otp-btn:hover {
+  background: #ed4e20;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(255, 99, 51, 0.25);
+}
+
+/* OTP SUCCESS */
+
+.otp-success {
+  text-align: center;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: #effbf2;
+  border: 1px solid #b8e8c2;
+  border-radius: 18px;
+  animation: trackingFade 0.5s ease;
+}
+
+.otp-success span {
+  font-size: 42px;
+}
+
+.otp-success h3 {
+  color: #218838;
+  margin: 12px 0 8px;
+}
+
+.otp-success p {
+  color: #666;
+  font-size: 13px;
+}
+
+/* DELIVERY PARTNER */
+
+.delivery-partner-card {
+  padding: 23px;
+  margin-bottom: 25px;
+  border: 1px solid #eeeeee;
+  border-radius: 18px;
+}
+
+.delivery-partner-card > h3 {
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+.partner-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.partner-avatar {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff0e8;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.partner-details {
+  flex: 1;
+}
+
+.partner-details h4 {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.partner-details p {
+  margin: 0 0 4px;
+  color: #ff9633;
+  font-size: 12px;
+}
+
+.partner-details span {
+  color: #999;
+  font-size: 11px;
+}
+
+.partner-call-btn {
+  padding: 10px 18px;
+  background: #ff6333;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.partner-call-btn:hover {
+  background: #e84d20;
+}
+
+.partner-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+
+.partner-message span {
+  font-size: 20px;
+}
+
+.partner-message p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+/* ORDER DETAILS */
+
+.tracking-order-details {
+  padding: 23px;
+  margin-bottom: 25px;
+  background: #fafafa;
+  border-radius: 18px;
+}
+
+.tracking-order-details h3 {
+  font-size: 17px;
+  margin-bottom: 18px;
+}
+
+.tracking-order-details p {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 11px 0;
+  margin: 0;
+  border-bottom: 1px solid #eeeeee;
+  color: #777;
+  font-size: 13px;
+}
+
+.tracking-order-details p:last-child {
+  border-bottom: none;
+}
+
+.tracking-order-details strong {
+  color: #292929;
+  text-align: right;
+}
+
+/* CONTINUE SHOPPING BUTTON */
+
+.tracking-btn {
+  display: block;
+  width: fit-content;
+  margin: 25px auto 0;
+  padding: 14px 28px;
+  background: #ff6333;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.tracking-btn:hover {
+  background: #e94f21;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(255, 99, 51, 0.2);
+}
+
+/* EMPTY ORDER */
+
+.tracking-empty {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.tracking-empty h2 {
+  color: #292929;
+  font-size: 26px;
+}
+
+.tracking-empty p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* =========================================
+   TABLET RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+  .tracking-page {
+    padding: 30px 15px;
+  }
+
+  .tracking-card {
+    padding: 25px 20px;
+  }
+
+  .tracking-header h1 {
+    font-size: 25px;
+  }
+
+  .delivery-eta {
+    padding: 18px;
+  }
+
+  .delivery-eta h2 {
+    font-size: 22px;
+  }
+
+  .otp-container {
+    gap: 12px;
+  }
+
+  .otp-box {
+    height: 56px;
+    font-size: 23px;
+  }
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 480px) {
+  .tracking-page {
+    padding: 18px 10px;
+  }
+
+  .tracking-card {
+    padding: 22px 15px;
+    border-radius: 18px;
+  }
+
+  .tracking-header h1 {
+    font-size: 22px;
+  }
+
+  .tracking-main-icon {
+    width: 62px;
+    height: 62px;
+    font-size: 30px;
+  }
+
+  .delivery-eta {
+    padding: 15px;
+  }
+
+  .delivery-eta h2 {
+    font-size: 19px;
+  }
+
+  .eta-icon {
+    font-size: 30px;
+  }
+
+  .tracking-step {
+    gap: 10px;
+    padding: 12px 9px;
+  }
+
+  .tracking-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 20px;
+  }
+
+  .tracking-step-info h3 {
+    font-size: 13px;
+  }
+
+  .tracking-step-info p {
+    font-size: 10px;
+  }
+
+  .step-status {
+    font-size: 9px;
+  }
+
+  .tracking-current-status h2 {
+    font-size: 18px;
+  }
+
+  .delivery-otp-card {
+    padding: 23px 13px;
+  }
+
+  .delivery-otp-card h3 {
+    font-size: 18px;
+  }
+
+  .otp-container {
+    gap: 10px;
+    max-width: 260px;
+  }
+
+  .otp-box {
+    height: 52px;
+    font-size: 21px;
+    border-radius: 11px;
+  }
+
+  .partner-info {
+    gap: 10px;
+  }
+
+  .partner-avatar {
+    width: 45px;
+    height: 45px;
+    font-size: 25px;
+  }
+
+  .partner-call-btn {
+    padding: 9px 12px;
+  }
+
+  .tracking-order-details p {
+    font-size: 11px;
+  }
+
+  .tracking-btn {
+    width: 100%;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 360px) {
+  .tracking-card {
+    padding: 18px 11px;
+  }
+
+  .tracking-header h1 {
+    font-size: 20px;
+  }
+
+  .otp-container {
+    gap: 8px;
+    max-width: 230px;
+  }
+
+  .otp-box {
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .step-status {
+    font-size: 8px;
+  }
+}
+.moving-bike {
+  transform: translateX(-50%) scaleX(-1);
+}

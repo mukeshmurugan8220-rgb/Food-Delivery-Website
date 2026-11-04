@@ -1,0 +1,395 @@
+/* =====================================
+   FOODIEGO SIGN IN PAGE
+===================================== */
+
+.signin-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff7f0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+
+.signin-container {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.09);
+}
+
+/* =====================================
+   LEFT SECTION
+===================================== */
+
+.signin-left {
+  background: linear-gradient(145deg, #ff6b35, #ff914d);
+  color: #ffffff;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Brand */
+
+.signin-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.signin-brand svg {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.signin-brand h2 {
+  font-size: 27px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Welcome Content */
+
+.signin-welcome-content {
+  margin: auto 0;
+}
+
+.signin-welcome-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffe5c9;
+  margin-bottom: 20px;
+}
+
+.signin-welcome-content h1 {
+  font-size: 43px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.signin-welcome-content h1 span {
+  color: #ffe0a8;
+}
+
+.signin-welcome-content p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #ffffff;
+  max-width: 390px;
+  margin: 0;
+}
+
+/* Food Images */
+
+.signin-food {
+  font-size: 42px;
+  margin: 30px 0;
+  letter-spacing: 7px;
+}
+
+.signin-welcome-content h3 {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+/* Copyright */
+
+.signin-left small {
+  font-size: 12px;
+  color: #ffe9dc;
+}
+
+/* =====================================
+   RIGHT SECTION
+===================================== */
+
+.signin-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: #ffffff;
+}
+
+.signin-form-wrapper {
+  width: 100%;
+  max-width: 380px;
+}
+
+/* Heading */
+
+.signin-form-wrapper h1 {
+  font-size: 31px;
+  font-weight: 800;
+  color: #222222;
+  margin: 10px 0;
+}
+
+.signin-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ff6b35;
+}
+
+.signin-subtitle {
+  font-size: 14px;
+  color: #777777;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* =====================================
+   FORM INPUTS
+===================================== */
+
+.signin-field {
+  margin-bottom: 22px;
+}
+
+.signin-field label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 9px;
+}
+
+.signin-input {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px;
+  border: 1px solid #dddddd;
+  border-radius: 9px;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+.signin-input:focus-within {
+  border-color: #ff6b35;
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.signin-input > svg {
+  font-size: 15px;
+  color: #999999;
+  flex-shrink: 0;
+}
+
+.signin-input input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #222222 !important;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.signin-input input::placeholder {
+  color: #999999 !important;
+  opacity: 1;
+}
+
+/* Password Toggle */
+
+.signin-input button.password-toggle {
+  width: 35px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #777777;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.signin-input button.password-toggle:hover {
+  color: #ff6b35;
+  background: transparent;
+}
+
+/* =====================================
+   REMEMBER / FORGOT PASSWORD
+===================================== */
+
+.signin-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 25px;
+  font-size: 13px;
+}
+
+.signin-options a {
+  color: #ff6b35;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signin-options a:hover {
+  text-decoration: underline;
+}
+
+/* =====================================
+   ERROR MESSAGE
+===================================== */
+
+.signin-error {
+  padding: 12px;
+  background: #fff0f0;
+  border: 1px solid #ffd4d4;
+  border-radius: 8px;
+  color: #d93025;
+  font-size: 13px;
+  margin-bottom: 18px;
+}
+
+/* =====================================
+   SIGN IN BUTTON
+===================================== */
+
+.signin-submit {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-radius: 9px;
+  background: #ff6b35;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signin-submit:hover {
+  background: #e95624;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(255, 107, 53, 0.2);
+}
+
+.signin-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =====================================
+   SIGN UP LINK
+===================================== */
+
+.signin-signup {
+  text-align: center;
+  margin-top: 25px;
+  color: #777777;
+  font-size: 14px;
+}
+
+.signin-signup a {
+  color: #ff6b35;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.signin-signup a:hover {
+  text-decoration: underline;
+}
+
+/* Back To Home */
+
+.signin-home {
+  display: block;
+  text-align: center;
+  margin-top: 18px;
+  font-size: 13px;
+  color: #777777;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.signin-home:hover {
+  color: #ff6b35;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+  .signin-page {
+    padding: 20px 12px;
+  }
+
+  .signin-container {
+    max-width: 480px;
+    grid-template-columns: 1fr;
+  }
+
+  .signin-left {
+    min-height: 330px;
+    padding: 28px;
+  }
+
+  .signin-welcome-content {
+    margin: 30px 0;
+  }
+
+  .signin-welcome-content h1 {
+    font-size: 34px;
+  }
+
+  .signin-food {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+
+  .signin-right {
+    padding: 40px 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .signin-left {
+    padding: 22px;
+  }
+
+  .signin-welcome-content h1 {
+    font-size: 29px;
+  }
+
+  .signin-right {
+    padding: 30px 20px;
+  }
+
+  .signin-form-wrapper h1 {
+    font-size: 26px;
+  }
+}
